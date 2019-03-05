@@ -1,0 +1,15 @@
+<% errors = model.errors %>
+
+<% if errors.any? %>
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <div class="lead buffer-bottom">
+      В вашей форме <%=  errors.count %>:
+    </div>
+
+    <ul>
+      <% errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
