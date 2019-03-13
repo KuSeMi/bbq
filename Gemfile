@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.2'
 gem 'uglifier', '>= 1.3.0'
+gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails', '~> 4.1'
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -17,6 +18,8 @@ end
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'better_errors'
+  gem "binding_of_caller"
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
