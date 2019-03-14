@@ -22,4 +22,8 @@ group :development do
   gem "binding_of_caller"
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
