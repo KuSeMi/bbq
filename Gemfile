@@ -10,6 +10,8 @@ gem 'devise-i18n'
 gem 'russian'
 gem 'twitter-bootstrap-rails'
 gem 'jquery-rails'
+gem 'carrierwave', '~> 1.0'
+gem 'rmagick'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
