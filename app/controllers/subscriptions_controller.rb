@@ -1,7 +1,6 @@
 class SubscriptionsController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
 
-  # Задаем подписку, которую юзер хочет удалить
   before_action :set_subscription, only: [:destroy]
 
 
@@ -12,10 +11,8 @@ class SubscriptionsController < ApplicationController
 
     if @new_subscription.save
       EventMailer.subscription(@event, @new_subscription).deliver_now
-      # Если сохранилась успешно, редирект на страницу самого события
       redirect_to @event, notice: I18n.t('controllers.subscriptions.created')
     else
-      # если ошибки — рендерим здесь же шаблон события
       render 'events/show', alert: I18n.t('controllers.subscriptions.error')
     end
   end
