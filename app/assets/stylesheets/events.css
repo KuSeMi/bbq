@@ -49,3 +49,7 @@
   width: 100%;
   height: 400px;
 }
+
+.danger {
+  margin: 0.5em;
+}

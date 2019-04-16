@@ -2,9 +2,12 @@
 <div class="row">
   <div class="col-md-6 buffer-top">
     <%= render 'form' %>
-
-    <%= link_to 'Show', @event %> |
-    <%= link_to 'Back', events_path %>
+    <div class="danger">
+      <%= link_to 'Удалить', event_path(@event), method: :delete,
+                  data: { confirm: 'Вы уверены?' }, class: 'btn btn-danger' %>
+    </div>
+    <%= link_to 'Показать', @event %> |
+    <%= link_to 'Назад', events_path %>
   </div>
 </div>
 
