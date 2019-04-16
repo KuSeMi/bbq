@@ -64,6 +64,8 @@ ru:
     one: '%{count} ошибка'
     few: '%{count} ошибки'
     many: '%{count} ошибок'
+  edit:
+    registration: 'Редактирование ваших данных'
 
   comments:
     comment:
