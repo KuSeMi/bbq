@@ -1,6 +1,5 @@
 class PhotosController < ApplicationController
   before_action :set_event, only: [:create, :destroy]
-
   before_action :set_photo, only: [:destroy]
 
   def create
@@ -9,6 +8,7 @@ class PhotosController < ApplicationController
     @new_photo.user = current_user
 
     if @new_photo.save
+      notificate_subscribers(@new_photo)
       redirect_to @event, notice: I18n.t('controllers.photos.created')
     else
       render 'events/show', alert: I18n.t('controllers.photos.error')
@@ -28,15 +28,21 @@ class PhotosController < ApplicationController
   end
 
   private
-    def set_event
-      @event = Event.find(params[:event_id])
-    end
+  def set_event
+    @event = Event.find(params[:event_id])
+  end
 
-    def set_photo
-      @photo = @event.photos.find(params[:id])
-    end
+  def set_photo
+    @photo = @event.photos.find(params[:id])
+  end
 
-    def photo_params
-      params.fetch(:photo, {}).permit(:photo)
-    end
+  def photo_params
+    params.fetch(:photo, {}).permit(:photo)
+  end
+
+  def notificate_subscribers(photo)
+    event = photo.event
+    emails = (event.subscriptions.map(&:user_email) + [event.user.email] - [photo.user.email]).uniq
+    emails.each { |email| EventMailer.photo_notification(photo, email).deliver_now }
+  end
 end

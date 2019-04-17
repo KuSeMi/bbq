@@ -31,6 +31,7 @@ ru:
         user_email: 'Ваш email'
       photo:
         photo: 'Фотография'
+        user: 'Пользователь'
 
   # Перевод сообщений, которые отправляет контроллер
   controllers:
@@ -87,6 +88,12 @@ ru:
       title: 'Новая подписка'
       name: 'Имя'
       email: 'Email'
+      author: 'Автор'
+      event: 'Событие'
+      datetime: 'Состоится'
+      owner: 'Организатор'
+    photo_notification:
+      title: 'Новое фото'
       author: 'Автор'
       event: 'Событие'
       datetime: 'Состоится'

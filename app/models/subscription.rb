@@ -32,7 +32,7 @@ class Subscription < ApplicationRecord
     end
   end
 
-private
+  private
 
   def email_available
     if User.find_by(email: user_email)
