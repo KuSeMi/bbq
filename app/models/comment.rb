@@ -3,10 +3,8 @@ class Comment < ApplicationRecord
   belongs_to :user, optional:true
 
   validates :body, presence: true
-
   # поле должно быть, только если не выполняется user.present? (у объекта на задан юзер)
   validates :user_name, presence: true, unless: -> { user.present? }
-
 
   # переопределяем метод, если есть юзер, выдаем его имя,
   # если нет -- дергаем исходный переопределенный метод
