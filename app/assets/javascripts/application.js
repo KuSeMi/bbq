@@ -17,3 +17,9 @@
 //= require jquery_ujs
 //= require map
 //= require twitter/bootstrap
+//= require lightbox-bootstrap
+
+$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});

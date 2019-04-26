@@ -7,9 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
     <%= csrf_meta_tags %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=b9bc20d4-1780-4b0c-8f8d-fed3aa2182cf&lang=ru_RU"
-            type="text/javascript"></script>
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
   </head>
