@@ -10,14 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
-//= require activestorage
-//= require_tree .
 //= require jquery
-//= require jquery_ujs
-//= require map
 //= require twitter/bootstrap
 //= require lightbox-bootstrap
+//= require jquery_ujs
+//= require map
+//= require activestorage
+//= require_tree .
 
 $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
   event.preventDefault();
