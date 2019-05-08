@@ -13,8 +13,7 @@ gem 'lightbox-bootstrap-rails', '~> 5.1', '>= 5.1.0.1'
 gem 'sassc-rails'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 1.0'
-gem 'rmagick'
-# Гем для работы carrierwave с хранилищем Amazon S3
+gem 'rmagick', '~> 3.0.0'
 gem 'fog-aws'
 gem 'bootsnap', '>= 1.1.0', require: false
 
