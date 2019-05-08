@@ -76,6 +76,8 @@ GEM
     excon (0.62.0)
     execjs (2.7.0)
     ffi (1.10.0)
+    figaro (1.1.1)
+      thor (~> 0.14)
     fog-aws (3.4.0)
       fog-core (~> 2.1)
       fog-json (~> 1.1)
@@ -226,6 +228,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   devise
   devise-i18n
+  figaro
   fog-aws
   jquery-rails
   lightbox-bootstrap-rails (~> 5.1, >= 5.1.0.1)
