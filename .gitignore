@@ -28,12 +28,12 @@
 .byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+config/master.key
 .idea
-/public/uploads
-/config/database.yml
-/config/database.yml.example
-/config/secrets.yml
-/config/application.yml
+public/uploads
+config/database.yml
+config/database.yml.example
+config/secrets.yml
+config/application.yml
 # Ignore application configuration
-/config/application.yml
+config/application.yml
