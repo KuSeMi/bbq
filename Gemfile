@@ -17,6 +17,7 @@ gem 'rmagick', '~> 3.0.0'
 gem 'fog-aws'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "figaro"
+gem 'pundit', '2.0.0'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.6'

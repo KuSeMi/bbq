@@ -98,3 +98,5 @@ ru:
       event: 'Событие'
       datetime: 'Состоится'
       owner: 'Организатор'
+  pundit:
+    not_authorized: 'Нет разрешения для данного действия'    
