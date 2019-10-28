@@ -30,6 +30,10 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'better_errors'
   gem "binding_of_caller"
+  gem 'pry'
+  gem 'rspec-rails', '~> 3.9'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :production do
