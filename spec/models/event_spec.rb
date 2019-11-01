@@ -4,6 +4,8 @@ RSpec.describe Event, type: :model do
 
   let(:event){ create(:event, user: user) }
   let(:user){ create(:user) }
+  let(:jane){ create(:user) }
+  let(:ork){ create(:user) }
 
   describe 'validations check' do
     it { should validate_presence_of(:user) }
@@ -22,11 +24,7 @@ RSpec.describe Event, type: :model do
 
   describe '#visitors' do
     it 'return all visitors' do 
-      jane = User.create(:email => 'jane@doe.com', :password => 'pw1234',
-                                        :password_confirmation => 'pw1234')
-      ork = User.create(:email => 'ork@doe.com', :password => 'pw12345',
-                                        :password_confirmation => 'pw12345')
-
+     
       event.subscribers << jane
        
       expect(event.visitors).to include(jane)
