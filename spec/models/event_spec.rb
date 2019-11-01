@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Event, type: :model do
 
-  let!(:event){ create(:event) }
-  let!(:user){ create(:user) }
+  let(:event){ create(:event, user: user) }
+  let(:user){ create(:user) }
 
   describe 'validations check' do
     it { should validate_presence_of(:user) }
@@ -22,17 +22,16 @@ RSpec.describe Event, type: :model do
 
   describe '#visitors' do
     it 'return all visitors' do 
-      user = User.create(:email => 'jane@doe.com', :password => 'pw1234',
-        :password_confirmation => 'pw1234')
+      jane = User.create(:email => 'jane@doe.com', :password => 'pw1234',
+                                        :password_confirmation => 'pw1234')
+      ork = User.create(:email => 'ork@doe.com', :password => 'pw12345',
+                                        :password_confirmation => 'pw12345')
 
-      event = Event.create(title: "BBQ", description: 'Shashliki', address: 'Винница, Южный Буг',
-                           datetime:  DateTime.parse('28.10.2019 09:00'), user: user )  
-
-      subscriber = Subscription.create(:user_name => 'Gus', :user_email => 'john@doe.com',  
-                                       user_id: user.id, event_id: event.id)
-      
-      
-      expect(event.visitors).to eq(event.subscribers)
+      event.subscribers << jane
+       
+      expect(event.visitors).to include(jane)
+      expect(event.visitors).not_to include(ork)
+      expect(event.visitors).to include(event.user)
     end
   end  
 
