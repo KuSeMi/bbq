@@ -23,6 +23,9 @@ gem 'letter_opener'
 group :development, :test do
   gem 'sqlite3', '~> 1.3.6'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.9'
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
 end
 
 group :development do
