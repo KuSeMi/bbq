@@ -32,7 +32,7 @@ bundle exec rake db:migrate
 ```
 RECAPTCHA_BBQ_SECRET_KEY
 RECAPTCHA_BBQ_SITE_KEY
-
+```
 + `SendGrid`
 ```
 SENDGRID_USERNAME
