@@ -1,32 +1,32 @@
-## Приложение "Шашлыки"
-#### Учебное приложение
+# BBQ Events App 🍖
+#### Educational Project
 
-#### Аннотация
-Проект реализован на 
+#### Description
+This project was developed using:
 ```
  ruby '2.5.3'
 
 'rails', '~> 5.2.2'` 
 ```
-в учебных целях.
+for educational purposes.
 
-#### Краткое описание
-Приложение предназначено для планирования совместных мероприятий. После регистрации пользователь может добавить мероприятие, в котором могут принять участие другие пользователи. Возможно ограничение доступа путём установки пинкода.
+#### Overview
+The application is designed for planning joint events. After registration, a user can create an event, and other users can join it. Access to events can be restricted by setting a PIN code.
 
-#### Опробованные/использованные технологии:
-+ [reCaptcha](https://www.google.com/recaptcha/intro/)`
-+ Связь many-to-many (функционал подписок)
-+ Отправка электронной почты через `SendGrid`
-+ Обработка изображений на сервере (`CarrierWave`, `rmagick`)
+#### Technologies Used:
++ [reCaptcha](https://www.google.com/recaptcha/intro/)
++ Many-to-Many relationships (subscription functionality)
++ Email sending via `SendGrid`
++ Image processing on the server (`CarrierWave`, `rmagick`)
 
-#### Установка и запуск
-Перед запуском приложения необходимо выполнить установку всех необходимых гемов и подготовку базы данных. Для этого в консоли в директории с приложением необходимо выполнить команды:
+#### Installation and Setup
+Before running the application, you need to install all required gems and prepare the database. Run the following commands in the application directory:
 ```
 bundle install
 bundle exec rake db:migrate
 ```
 
-А так же необходимо установить переменные окружения для работы:
+You also need to set up environment variables for:
 
 + `reCaptcha`
 ```
@@ -39,12 +39,14 @@ SENDGRID_USERNAME
 SENDGRID_PASSWORD
 ```
 
-Для запуска локального сервера необходимо выполнить команду:
+To start the local server, run:
+
 ```
 bundle exec rails s
 ```
 
-Полный список всех используемых гемов указан в файле `Gemfile`
 
-#### Демо
-Aктуальная версия приложения крутится [здесь](https://bbqevent.herokuapp.com)
+The full list of used gems can be found in the `Gemfile`.
+
+#### Demo
+The current version of the application is hosted [here](https://bbqevent.herokuapp.com).
